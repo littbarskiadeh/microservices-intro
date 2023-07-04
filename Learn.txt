@@ -1,0 +1,38 @@
+Microservices
+
+**Redis - In-memory data store used for web apps
+
+##WSDL - Unix
+ladeh/password123
+
+Docker 
+
+docker ps
+docker ps --all 
+docker run
+docker create
+docker start
+docker system prune --- removes/deletes containers to free disk space
+docker logs
+docker stop (.. 10 seconds)
+docker kill
+docker exec -- execute additional command in container; 
+    < -it > flag ...allows for text input and 'pretty' output on the terminal.[-it .equals( -i -t) ]
+docker build <.>
+
+#Build Docker file
+- include instructions for the build
+
+docker commit -c 'CMD ["redis-server"]' CONTAINERID
+docker commit -c "CMD 'redis-server'" CONTAINERID
+
+-- Port mappings 
+$ docker run -p 8080(localhost):8080(container port) ladeh/simpleweb
+
+***To Dockerize a NodeJS app ***
+
+1. Complete the App for deployment 
+2. Create Dockerfile 
+3. Add .dockerignore file 
+4. Build image - "docker build ..." (use -t in Build to tag the container)
+5. Run the the new container 
